@@ -2,7 +2,6 @@ package azu.app.springbootauthentication.service;
 
 import azu.app.springbootauthentication.mapper.UserMapper;
 import azu.app.springbootauthentication.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -35,7 +34,6 @@ public class AuthenticationService implements AuthenticationProvider {
                 return new UsernamePasswordAuthenticationToken(username, password,new ArrayList<>());
             }
         }
-
         return null;
     }
 
